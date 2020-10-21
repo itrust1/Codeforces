@@ -28,6 +28,8 @@ int main(){
 //            cout<<endl;
     }
     int flag =0;
+    // for s such that dp[n][s]==1 then we will take the sum as clockwise rotation and the remaining total_sum - s as anticlockwise rotation
+    // so net rotation is  s - (total_sum - s) and if that is multiple of 360 then print YES
     for(int s =0; s<=total_sum; ++s){
         if(dp[n][s]==1 && ((2*s-total_sum)%360==0) ){
             flag=1;
